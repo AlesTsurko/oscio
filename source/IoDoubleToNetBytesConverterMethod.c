@@ -6,10 +6,8 @@
 #include <string.h>
 #if _WIN32
 #include <winsock2.h>
-#define tosc_strncpy(_dst, _src, _len) strncpy_s(_dst, _len, _src, _TRUNCATE)
 #else
 #include <netinet/in.h>
-#define tosc_strncpy(_dst, _src, _len) strncpy(_dst, _src, _len)
 #endif
 #if __unix__ && !__APPLE__
 #include <endian.h>
